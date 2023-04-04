@@ -1,0 +1,80 @@
+
+/* Fonts Google Oswald https://fonts.google.com/specimen/Oswald */
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+/* Fonts téléchargée sur Google et mis dans le dossier puis importée dans le projet
+https://fonts.google.com/specimen/DM+Serif+Display?query=dm+ser */
+@font-face {
+    font-family: "DMSerif";
+    src: url(./assets/fonts/DM_Serif_Display/DMSerifDisplay-Regular.ttf);
+    font-style: normal;
+    font-weight: normal;
+}
+
+
+
+// variables
+// colors http://davidbau.com/colors/
+$color0: white;
+$color1: black;
+$color2: grey;
+$color3: grey;
+$color4: grey;
+
+
+$black1: rgb(17, 12, 12);
+
+$font1: 'font1', serif, sans-serif;
+
+$background1: grey;
+
+// $font2: , serif;
+
+
+
+// MIXINS
+@mixin title{ // @include title;
+    font-family: $font1;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    p{
+        color: burlywood;
+    }
+    h1{
+
+    }
+    h2{
+
+    }
+
+}
+
+@mixin center { // @include center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+@mixin margin { // @include margin;
+
+}
+
+
+@mixin informations{ // @include informations;
+}
+
+html{
+    scroll-behavior: smooth; // scroll en douceur
+}
+
+
+body{
+    background: rgb(44, 17, 17) ;
+    // background: url(../assets/img/dish-gallery-01.jpg) fixed center/cover;
+    font-family: $font1;
+
+}
+
+ 

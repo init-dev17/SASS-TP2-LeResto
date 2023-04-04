@@ -1,0 +1,66 @@
+
+.section1-discover{
+    background-color: white;
+    
+    display: grid;
+    grid-template-columns: 50% 50%;
+
+    img{
+        width: 100%;
+    }
+
+}
+
+.section2-menu{
+    // https://developer.mozilla.org/en-US/docs/Web/CSS/background-image
+    background: url(./assets/img/bg-menu-01.jpg) fixed center, $background1;
+    // https://developer.mozilla.org/en-US/docs/Web/CSS/background-size
+    background-size: contain;
+    background-repeat: no-repeat;
+    // https://developer.mozilla.org/en-US/docs/Web/CSS/background-position
+    background-position: bottom; 
+
+
+    display: block;
+    height: 100vh;
+
+    @include center;
+    
+    .repas{
+
+        .type{
+            display: flex;
+        }
+
+    }
+
+    .carte{
+        background: white;
+        margin: 30%;
+        
+    }
+}
+
+.section3-rdv{
+    background-color: $background1;
+
+    display: grid;
+    grid-template-columns: 30% 70%;
+
+    .ouverture{
+        background-color: black;
+        height: 500px;
+    }
+    .reservation{
+        background-color: white;
+    }
+
+}
+.section4-event{
+    background-color: $background1;
+
+}
+.section5-CEO{
+    background-color: $background1;
+
+}

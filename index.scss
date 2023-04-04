@@ -1,0 +1,23 @@
+// index.scss rassemble tous les fichiers SASS
+
+
+
+// 7.1 SASS Architecture 
+// https://gist.github.com/rveitch/84cea9650092119527bc
+
+// MAJ : le terme @import n'est plus recommandé et il faut préférer le terme @use. Cependant le @use est un peu plus ennuyeux à utiliser, je recommanderai d'attendre qu'une meilleure version sorte avant de s'en servir
+
+@import "./pages/settings"; // utils / variables
+@import "./base/reset"; // Reset/normalize
+
+@import "./layout/navbar"; // Navigation
+@import "./layout/header"; // Header
+@import "./layout/main"; // Main
+@import "./layout/section"; // Section 
+@import "./layout/footer"; // Footer
+@import "./layout/forms"; // Forms
+
+@import "./components/buttons"; // Buttons
+
+
+
