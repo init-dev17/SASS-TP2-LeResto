@@ -18,7 +18,43 @@ footer{
 
 .footer-right{
     display: block;
-    .social{
-        height: 300px;
+    padding: 60px 5%;
+    
+    input {
+        padding: 8px 0;
+        border-radius: 5px;
+        outline: none;
+        border: 1px solid dimgray;
+        transition: 0.5s;
+        text-align: center;
+        font-size: 1.1rem;
+        color: white;
+        width: 35%;
+        max-width: 300px;
+        min-width: 150px;
+        background-color: transparent;
+
+        &[type="text"] { /* Paramètre l'intérieur du bouton */
+            &:focus{
+            background: transparent;
+            border: 1px solid lightgray;
+        
+            border-radius: 150px; 
+            transition: 2s;              
+            }                
+        
+        }
+    }
+
+
+    .social-bottom{
+        @include informations;
+
+    
+    
+    .links {
+        display: flex;
+        gap: 8%;
+        }
     }
 }

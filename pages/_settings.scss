@@ -89,6 +89,9 @@ $background1: grey;
 
 
 @mixin informations{ // @include informations;
+    display: grid;
+    grid-template-columns: 30% 70%;
+    padding: 3%;
 }
 
 
