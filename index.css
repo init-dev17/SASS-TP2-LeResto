@@ -77,8 +77,9 @@ header {
   grid-template-columns: 50% 50%;
   max-width: 1300px;
   margin: auto;
+  align-items: center;
 }
-.section1-discover .s1-container img {
+.section1-discover .s1-container .img img {
   width: 100%;
 }
 
