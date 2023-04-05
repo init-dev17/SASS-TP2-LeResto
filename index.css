@@ -4,10 +4,24 @@
 /* Fonts téléchargée sur Google et mis dans le dossier puis importée dans le projet
 https://fonts.google.com/specimen/DM+Serif+Display?query=dm+ser */
 @font-face {
-  font-family: "DMSerif";
-  src: url(./assets/fonts/DM_Serif_Display/DMSerifDisplay-Regular.ttf);
-  font-style: normal;
-  font-weight: normal;
+  font-family: "allura-regular";
+  src: url(../assets/fonts/Allura/Allura-Regular.ttf);
+}
+@font-face {
+  font-family: "poppins-medium";
+  src: url(../assets/fonts/Poppins/Poppins-Medium.ttf);
+}
+@font-face {
+  font-family: "robot-light";
+  src: url(../assets/fonts/Roboto/Roboto-Light.ttf);
+}
+@font-face {
+  font-family: "inter-bold";
+  src: url(../assets/fonts/Inter/static/Inter-Light.ttf);
+}
+@font-face {
+  font-family: "merri";
+  src: url(../assets/fonts/Merriweather/Merriweather-Regular.ttf);
 }
 html {
   scroll-behavior: smooth;
@@ -15,7 +29,6 @@ html {
 
 body {
   background: rgb(44, 17, 17);
-  font-family: "font1", serif, sans-serif;
 }
 
 * {
@@ -30,13 +43,15 @@ li {
 }
 
 nav {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+  display: grid;
+  grid-template-columns: 10% 80% 10%;
+  margin: 2% 10%;
 }
 nav .navigation {
   display: flex;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
 }
 nav .social {
   display: flex;
@@ -45,23 +60,35 @@ nav .social {
 header {
   background: url(./assets/img/bg-slider-06.jpg) fixed center/cover;
   height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  color: white;
 }
 
 .section1-discover {
+  display: block;
+}
+.section1-discover .s1-container {
   background-color: white;
   display: grid;
   grid-template-columns: 50% 50%;
+  max-width: 1300px;
+  margin: auto;
 }
-.section1-discover img {
+.section1-discover .s1-container img {
   width: 100%;
 }
 
 .section2-menu {
-  background: url(./assets/img/bg-menu-01.jpg) fixed center, grey;
+  background: url("./assets/img/bg-menu-01.jpg") fixed center, grey;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: bottom;
-  display: block;
+  display: flex;
+  flex-direction: column;
   height: 100vh;
   display: flex;
   align-items: center;
@@ -73,34 +100,124 @@ header {
 }
 .section2-menu .carte {
   background: white;
-  margin: 30%;
+  margin: 0 30%;
+  height: 500px;
+  width: 70%;
+  max-width: 1000px;
 }
 
 .section3-rdv {
   background-color: grey;
+  margin: auto;
+  max-width: 1300px;
+}
+.section3-rdv .rdv {
   display: grid;
   grid-template-columns: 30% 70%;
+  margin: 15% 15%;
 }
-.section3-rdv .ouverture {
+.section3-rdv .rdv .ouverture {
   background-color: black;
   height: 500px;
 }
-.section3-rdv .reservation {
+.section3-rdv .rdv .reservation {
   background-color: white;
 }
 
 .section4-event {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+}
+.section4-event .event {
   background-color: grey;
+  display: grid;
+  grid-template-columns: 60% 40%;
+  max-width: 1300px;
+  width: 80%;
+}
+.section4-event .event .left {
+  display: block;
+}
+.section4-event .event .left .high-left {
+  display: grid;
+  grid-template-columns: 40% 60%;
+}
+.section4-event .event .left .bottom-left {
+  display: grid;
+  grid-template-columns: 40% 60%;
 }
 
 .section5-CEO {
-  background-color: grey;
+  background: url("./assets/img/gmap.jpg") fixed center, grey;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  display: block;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.section5-CEO .citation {
+  background: white;
+  width: 70%;
+  height: 300px;
+  max-width: 800px;
+}
+footer {
+  background: url(./assets/img/bg-footer.jpg) fixed center/cover;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  color: white;
 }
 
 .footer-left {
-  background-color: grey;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  margin: auto 5% auto 25%;
+  text-align: start;
 }
 
+.footer-right {
+  display: block;
+}
 .footer-right .social {
   height: 300px;
+}
+
+nav .navigation a {
+  text-decoration: none;
+  color: white;
+  /*
+    border: none;
+    border-radius: 50px;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
+
+
+   */
+  /*
+    &:hover {
+        border: 1px solid $black2;
+        color: $color0;
+        background-color: $black2;
+        font-size: 1.2rem;
+  }
+  &:active{
+    color: $color0;
+    background-color: $black2;
+    transform: scale(1.2);  
+  }
+  */
 }/*# sourceMappingURL=index.css.map */

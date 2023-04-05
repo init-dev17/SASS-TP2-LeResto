@@ -5,11 +5,35 @@
 /* Fonts téléchargée sur Google et mis dans le dossier puis importée dans le projet
 https://fonts.google.com/specimen/DM+Serif+Display?query=dm+ser */
 @font-face {
-    font-family: "DMSerif";
-    src: url(./assets/fonts/DM_Serif_Display/DMSerifDisplay-Regular.ttf);
-    font-style: normal;
-    font-weight: normal;
+    font-family: "allura-regular";
+    src: url(../assets/fonts/Allura/Allura-Regular.ttf);
 }
+@font-face {
+    font-family: "poppins-medium";
+    src: url(../assets/fonts/Poppins/Poppins-Medium.ttf);
+}
+@font-face {
+    font-family: "robot-light";
+    src: url(../assets/fonts/Roboto/Roboto-Light.ttf);
+}
+
+
+
+@font-face {
+    font-family: "inter-bold";
+    src: url(../assets/fonts/Inter/static/Inter-Light.ttf);
+  }
+  @font-face {
+    font-family: "merri";
+    src: url(../assets/fonts/Merriweather/Merriweather-Regular.ttf);
+  }
+  
+$font10: inter-bold, sans-serif;
+$font11: merri, serif;
+
+ 
+// font-family: $font11;
+
 
 
 
@@ -24,7 +48,9 @@ $color4: grey;
 
 $black1: rgb(17, 12, 12);
 
-$font1: 'font1', serif, sans-serif;
+$font1: allura-regular, serif, sans-serif;
+$font2: poppins-medium, sans-serif, serif;
+$font3: robot-light, serif, sans-serif;
 
 $background1: grey;
 
@@ -65,6 +91,20 @@ $background1: grey;
 @mixin informations{ // @include informations;
 }
 
+
+
+@mixin fond-deroulant($image){ // @include fond-deroulant;
+    // https://developer.mozilla.org/en-US/docs/Web/CSS/background-image
+    background: url($image) fixed center, $background1;
+    // https://developer.mozilla.org/en-US/docs/Web/CSS/background-size
+    background-size: contain;
+    background-repeat: no-repeat;
+    // https://developer.mozilla.org/en-US/docs/Web/CSS/background-position
+    background-position: bottom; 
+}
+
+
+
 html{
     scroll-behavior: smooth; // scroll en douceur
 }
@@ -73,8 +113,7 @@ html{
 body{
     background: rgb(44, 17, 17) ;
     // background: url(../assets/img/dish-gallery-01.jpg) fixed center/cover;
-    font-family: $font1;
-
+ 
 }
 
  

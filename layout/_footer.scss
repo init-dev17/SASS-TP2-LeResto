@@ -1,13 +1,23 @@
 
 
 
+footer{
+    background: url(./assets/img/bg-footer.jpg) fixed center/cover;
+    display: grid;
+    grid-template-columns: 50% 50%;
+
+    color: white;
+}
 .footer-left{
-    background-color: $background1;
-    
+    @include center;
+    flex-direction: column;
+    margin: auto 5% auto 25%;
+    text-align: start;
 }
 
 
 .footer-right{
+    display: block;
     .social{
         height: 300px;
     }

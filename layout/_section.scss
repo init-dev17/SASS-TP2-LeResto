@@ -1,28 +1,32 @@
 
+
+
 .section1-discover{
+    display: block;
+    
+
+.s1-container{
     background-color: white;
     
     display: grid;
     grid-template-columns: 50% 50%;
+    max-width: 1300px;
+    margin: auto;
+
 
     img{
         width: 100%;
     }
-
+}
 }
 
 .section2-menu{
-    // https://developer.mozilla.org/en-US/docs/Web/CSS/background-image
-    background: url(./assets/img/bg-menu-01.jpg) fixed center, $background1;
-    // https://developer.mozilla.org/en-US/docs/Web/CSS/background-size
-    background-size: contain;
-    background-repeat: no-repeat;
-    // https://developer.mozilla.org/en-US/docs/Web/CSS/background-position
-    background-position: bottom; 
+    @include fond-deroulant("./assets/img/bg-menu-01.jpg");
 
-
-    display: block;
+    display: flex;
+    flex-direction: column;
     height: 100vh;
+    
 
     @include center;
     
@@ -36,16 +40,26 @@
 
     .carte{
         background: white;
-        margin: 30%;
-        
+        margin: 0 30%;
+        height: 500px;
+        width: 70%;
+        max-width: 1000px;
+         
     }
 }
 
 .section3-rdv{
     background-color: $background1;
+    margin: auto;
+    max-width: 1300px;
 
-    display: grid;
-    grid-template-columns: 30% 70%;
+    .rdv{
+        display: grid;
+        grid-template-columns: 30% 70%;
+
+
+        margin: 15% 15%;
+        
 
     .ouverture{
         background-color: black;
@@ -54,13 +68,56 @@
     .reservation{
         background-color: white;
     }
-
+    }
 }
+
 .section4-event{
+    @include center;
+    flex-direction: column;
+
+.event{
     background-color: $background1;
 
+    display: grid;
+    grid-template-columns: 60% 40%;
+
+    max-width: 1300px;
+    width: 80%;
+
+      .left{
+        display: block;
+        .high-left{
+            display: grid;
+            grid-template-columns: 40% 60%
+        }
+
+        .bottom-left{ 
+            display: grid;
+            grid-template-columns: 40% 60%
+        }
+      }
+    }
 }
+
+
 .section5-CEO{
-    background-color: $background1;
+    @include fond-deroulant("./assets/img/gmap.jpg");
+
+    display: block;
+    height: 100vh;
+    @include center;
+
+
+    .citation{
+        background: white;
+        
+        width: 70%;
+        height: 300px;
+        max-width: 800px;
+        p{
+        
+        }
+    }
+
 
 }

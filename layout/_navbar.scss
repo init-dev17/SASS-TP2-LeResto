@@ -1,11 +1,16 @@
 
 
 nav{
-    @include center;
-
-
+    // @include center;
+    display: grid;
+    grid-template-columns: 10% 80% 10%;
+    margin: 2% 10%;
+ 
     .navigation{
         display: flex;
+        align-items: center;
+        justify-content: space-around;
+        text-align: center;
     }
 
     .social{

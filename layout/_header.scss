@@ -4,6 +4,11 @@
 header{
     background: url(./assets/img/bg-slider-06.jpg) fixed center/cover;
     height: 100vh;
+
+    @include center;
+    flex-direction: column;
+
+    color: white;
 }
 
 
