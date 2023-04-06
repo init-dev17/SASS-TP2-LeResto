@@ -4,24 +4,16 @@
 /* Fonts téléchargée sur Google et mis dans le dossier puis importée dans le projet
 https://fonts.google.com/specimen/DM+Serif+Display?query=dm+ser */
 @font-face {
-  font-family: "allura-regular";
-  src: url(../assets/fonts/Allura/Allura-Regular.ttf);
+  font-family: "allura";
+  src: url("../assets/fonts/Allura/Allura-Regular.ttf");
 }
 @font-face {
-  font-family: "poppins-medium";
-  src: url(../assets/fonts/Poppins/Poppins-Medium.ttf);
+  font-family: "poppins";
+  src: url("../assets/fonts/Poppins/Poppins-Medium.ttf");
 }
 @font-face {
-  font-family: "robot-light";
-  src: url(../assets/fonts/Roboto/Roboto-Light.ttf);
-}
-@font-face {
-  font-family: "inter-bold";
-  src: url(../assets/fonts/Inter/static/Inter-Light.ttf);
-}
-@font-face {
-  font-family: "merri";
-  src: url(../assets/fonts/Merriweather/Merriweather-Regular.ttf);
+  font-family: "robot";
+  src: url("../assets/fonts/Roboto/Roboto-Light.ttf");
 }
 html {
   scroll-behavior: smooth;
@@ -47,19 +39,55 @@ nav {
 }
 nav .nav-container {
   display: grid;
-  grid-template-columns: 5% 70% 25%;
-  margin: 2% 0;
+  grid-template-columns: 15% 65% 20%;
+  margin: 2% auto;
   position: absolute;
   width: 100%;
+}
+@media screen and (min-width: 560px) and (max-width: 750px) {
+  nav .nav-container { /* Tablette */
+    grid-template-columns: 12% 88% 0fr;
+  }
+}
+nav .nav-container .resto {
+  color: white;
+  font-family: allura;
+  font-size: 2.3rem;
+  font-weight: bold;
+  margin: 0 auto;
+  /*@media screen and (min-width: 560px) and (max-width: 750px) {  Tablette 
+      display: none;
+  }*/
 }
 nav .nav-container .navigation {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   text-align: center;
+  margin: 0 2%;
 }
-nav .nav-container .social {
+@media screen and (max-width: 560px) {
+  nav .nav-container .navigation { /* Tablette */
+    display: block;
+  }
+  nav .nav-container .navigation a {
+    margin: auto;
+  }
+}
+nav .social {
   display: flex;
+  justify-content: space-around;
+  margin: auto;
+}
+@media screen and (min-width: 560px) and (max-width: 750px) {
+  nav .social { /* Tablette */
+    display: none;
+  }
+}
+@media screen and (max-width: 560px) {
+  nav .social { /* Mobile */
+    display: block;
+  }
 }
 
 header {

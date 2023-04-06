@@ -6,22 +6,53 @@ nav{
     .nav-container{
     // @include center;
     display: grid;
-    grid-template-columns: 5% 70% 25%;
-    margin: 2% 0;
+    grid-template-columns: 15% 65% 20%;
+    margin: 2% auto;
     position: absolute;
     width: 100%;
-
     
+    @media screen and (min-width: 560px) and (max-width: 750px) {  /* Tablette */
+        grid-template-columns: 12% 88% 0fr;
+    }
+        .resto{
+            color: white;
+            font-family: allura;
+            font-size: 2.3rem;
+            font-weight: bold;
+            margin: 0 auto;
+        /*@media screen and (min-width: 560px) and (max-width: 750px) {  Tablette 
+            display: none;
+        }*/ 
+        }
  
-    .navigation{
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-        text-align: center;
+        .navigation{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            text-align: center;
+            margin: 0 2%;
+            
+            @media screen and (max-width: 560px) { /* Tablette */ 
+            display: block;
+            
+            a{
+              margin: auto;  
+            }
+            }
+        }
+
     }
 
     .social{
         display: flex;
+        justify-content: space-around;
+        margin: auto;
+
+        @media screen  and (min-width: 560px) and (max-width: 750px) { /* Tablette */ 
+            display: none;
+        }
+        @media screen  and (max-width: 560px) { /* Mobile */ 
+            display: block;
+        }
     }
-}
 }
