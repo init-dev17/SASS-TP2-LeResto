@@ -35,6 +35,15 @@ nav{
             @media screen and (max-width: 560px) { /* Tablette */ 
             display: block;
             
+
+            transform: translateY(-100%);
+            &:hover{
+            animation: h1anim 1.5s ease-in-out forwards;   /*Appel de l'animation h1anim, ease-in-out = lent au début et à la fin, forwards fait rester l'animation */
+            transform-origin: top; // fait partir l'animation de la gauche */
+            }
+        
+        
+
             a{
               margin: auto;  
             }

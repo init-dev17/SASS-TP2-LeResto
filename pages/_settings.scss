@@ -89,6 +89,13 @@ $font3: robot, serif, sans-serif;
 }
 
 
+@keyframes h1anim { 
+    to /* 100%*/ {
+        
+        transform: translateY(0%) scaleX(1); /* rappel de translateX car cette ligne écrase le transform dans le h1::after */
+    }
+}
+
 
 html{
     scroll-behavior: smooth; // scroll en douceur
@@ -99,6 +106,25 @@ body{
     background: rgb(44, 17, 17) ;
     // background: url(../assets/img/dish-gallery-01.jpg) fixed center/cover;
  
+    &:before{ // animation au moment du chargement de la page web
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0%;
+        left: 0;
+        background-color: black;
+        animation: animBefore 2.8s ease forwards; // appelle l'animation et reste dans l'état final (forwards)
+        animation-delay: 0.15s;
+
+        @keyframes animBefore{ 
+            to{
+                opacity: 0;
+            }
+        }
+    }
+
+
 }
 
  

@@ -15,12 +15,33 @@ https://fonts.google.com/specimen/DM+Serif+Display?query=dm+ser */
   font-family: "robot";
   src: url("../assets/fonts/Roboto/Roboto-Light.ttf");
 }
+@keyframes h1anim {
+  to {
+    transform: translateY(0%) scaleX(1); /* rappel de translateX car cette ligne écrase le transform dans le h1::after */
+  }
+}
 html {
   scroll-behavior: smooth;
 }
 
 body {
   background: rgb(44, 17, 17);
+}
+body:before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0%;
+  left: 0;
+  background-color: black;
+  animation: animBefore 2.8s ease forwards;
+  animation-delay: 0.15s;
+}
+@keyframes animBefore {
+  to {
+    opacity: 0;
+  }
 }
 
 * {
@@ -69,6 +90,11 @@ nav .nav-container .navigation {
 @media screen and (max-width: 560px) {
   nav .nav-container .navigation { /* Tablette */
     display: block;
+    transform: translateY(-100%);
+  }
+  nav .nav-container .navigation:hover {
+    animation: h1anim 1.5s ease-in-out forwards; /*Appel de l'animation h1anim, ease-in-out = lent au début et à la fin, forwards fait rester l'animation */
+    transform-origin: top;
   }
   nav .nav-container .navigation a {
     margin: auto;
