@@ -27,7 +27,7 @@ $color2: grey;
 $color3: grey;
 $color4: grey;
 
-$background1: grey;
+$background1: dimgrey;
 $black1: rgb(17, 12, 12);
 $hiero: burlywood;
 
@@ -94,7 +94,9 @@ $font3: robot, serif, sans-serif;
         
         transform: translateY(0%) scaleX(1); /* rappel de translateX car cette ligne écrase le transform dans le h1::after */
     }
-}
+} 
+ 
+
 
 
 html{

@@ -11,9 +11,9 @@ nav{
     position: absolute;
     width: 100%;
     
-    @media screen and (min-width: 560px) and (max-width: 750px) {  /* Tablette */
-        grid-template-columns: 12% 88% 0fr;
-    }
+        @media screen and (min-width: 560px) and (max-width: 750px) {  /* Tablette */
+            grid-template-columns: 12% 88% 0fr;
+        }   
         .resto{
             color: white;
             font-family: allura;
@@ -32,21 +32,20 @@ nav{
             text-align: center;
             margin: 0 2%;
             
+
+
             @media screen and (max-width: 560px) { /* Tablette */ 
-            display: block;
-            
+                display: block;
+                transform: translateY(-100%);
+                
+                &:hover{
+                    animation: h1anim 1.5s ease-in-out forwards;   /*Appel de l'animation h1anim, ease-in-out = lent au début et à la fin, forwards fait rester l'animation */
+                    transform-origin: top; // fait partir l'animation de la gauche */
+                }
 
-            transform: translateY(-100%);
-            &:hover{
-            animation: h1anim 1.5s ease-in-out forwards;   /*Appel de l'animation h1anim, ease-in-out = lent au début et à la fin, forwards fait rester l'animation */
-            transform-origin: top; // fait partir l'animation de la gauche */
-            }
-        
-        
-
-            a{
-              margin: auto;  
-            }
+                a{
+                 margin: auto; 
+                }
             }
         }
 

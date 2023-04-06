@@ -147,7 +147,7 @@ header {
 }
 
 .section2-menu {
-  background: url("./assets/img/bg-menu-01.jpg") fixed center, grey;
+  background: url("./assets/img/bg-menu-01.jpg") fixed center, dimgrey;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: bottom;
@@ -198,7 +198,7 @@ header {
 }
 
 .section3-rdv {
-  background-color: grey;
+  background-color: dimgrey;
   margin: auto;
   max-width: 1300px;
 }
@@ -223,7 +223,7 @@ header {
   flex-direction: column;
 }
 .section4-event .event {
-  background-color: grey;
+  background-color: dimgrey;
   display: grid;
   grid-template-columns: 60% 40%;
   max-width: 1300px;
@@ -242,7 +242,7 @@ header {
 }
 
 .section5-CEO {
-  background: url("./assets/img/gmap.jpg") fixed center, grey;
+  background: url("./assets/img/gmap.jpg") fixed center, dimgrey;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: bottom;
