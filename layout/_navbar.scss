@@ -1,10 +1,17 @@
 
 
 nav{
+    position: relative;
+
+    .nav-container{
     // @include center;
     display: grid;
-    grid-template-columns: 10% 80% 10%;
-    margin: 2% 10%;
+    grid-template-columns: 5% 70% 25%;
+    margin: 2% 0;
+    position: absolute;
+    width: 100%;
+
+    
  
     .navigation{
         display: flex;
@@ -16,4 +23,5 @@ nav{
     .social{
         display: flex;
     }
+}
 }

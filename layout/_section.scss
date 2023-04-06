@@ -14,6 +14,11 @@
     margin: auto;
 
     align-items: center;
+
+    .store{
+        outline: 1px dashed lightgray;
+        margin: 5%;
+    }
     
     .img{
         img{
@@ -35,6 +40,7 @@
     
     .repas{
 
+
         .type{
             display: flex;
         }
@@ -44,10 +50,37 @@
     .carte{
         background: white;
         margin: 0 30%;
-        height: 500px;
+        //height: 500px;
         width: 70%;
         max-width: 1000px;
-         
+        border-top: 0.3rem solid $hiero;
+
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        @media screen and (max-width: 650px) { /* Mobile */ 
+            display: block;
+        }
+
+            .plat{
+                display: grid;
+                grid-template-columns: 30% 60% 10%;
+                border-bottom: 1px dashed lightgray ;
+                padding: 7% 0;
+                margin: 0 5%;
+
+                @media screen and (min-width: 650px) and (max-width: 960px) { /* Tablette */ 
+                    display: block;
+                }
+      
+                @media screen and (max-width: 520px) { /* Mobile */
+                    display: block;
+                }
+                
+                .text{
+                    margin: 5%;
+                }
+            }
     }
 }
 

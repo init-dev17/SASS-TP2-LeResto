@@ -43,17 +43,22 @@ li {
 }
 
 nav {
-  display: grid;
-  grid-template-columns: 10% 80% 10%;
-  margin: 2% 10%;
+  position: relative;
 }
-nav .navigation {
+nav .nav-container {
+  display: grid;
+  grid-template-columns: 5% 70% 25%;
+  margin: 2% 0;
+  position: absolute;
+  width: 100%;
+}
+nav .nav-container .navigation {
   display: flex;
   align-items: center;
   justify-content: space-around;
   text-align: center;
 }
-nav .social {
+nav .nav-container .social {
   display: flex;
 }
 
@@ -79,6 +84,10 @@ header {
   margin: auto;
   align-items: center;
 }
+.section1-discover .s1-container .store {
+  outline: 1px dashed lightgray;
+  margin: 5%;
+}
 .section1-discover .s1-container .img img {
   width: 100%;
 }
@@ -102,9 +111,36 @@ header {
 .section2-menu .carte {
   background: white;
   margin: 0 30%;
-  height: 500px;
   width: 70%;
   max-width: 1000px;
+  border-top: 0.3rem solid burlywood;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+@media screen and (max-width: 650px) {
+  .section2-menu .carte { /* Mobile */
+    display: block;
+  }
+}
+.section2-menu .carte .plat {
+  display: grid;
+  grid-template-columns: 30% 60% 10%;
+  border-bottom: 1px dashed lightgray;
+  padding: 7% 0;
+  margin: 0 5%;
+}
+@media screen and (min-width: 650px) and (max-width: 960px) {
+  .section2-menu .carte .plat { /* Tablette */
+    display: block;
+  }
+}
+@media screen and (max-width: 520px) {
+  .section2-menu .carte .plat { /* Mobile */
+    display: block;
+  }
+}
+.section2-menu .carte .plat .text {
+  margin: 5%;
 }
 
 .section3-rdv {
@@ -174,6 +210,12 @@ footer {
   display: grid;
   grid-template-columns: 50% 50%;
   color: white;
+}
+@media screen and (max-width: 650px) {
+  footer { /* Tablette */
+    display: block;
+    background: none;
+  }
 }
 
 .footer-left {
